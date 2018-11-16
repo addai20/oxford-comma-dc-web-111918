@@ -4,8 +4,14 @@ def oxford_comma(array)
   elsif array.length == 2 
     array.join(" and")
   elsif array.length == 3 
-    array.
-  
-    
+    new_arr = array.map do |word|
+      if array[word] < 2
+        word = word + ", "
+      else
+        word = word + " and"
+    end
+    return new_arr.join("")
+  end
+   
   end
 end
